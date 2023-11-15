@@ -2,3 +2,51 @@
 .navbar-nav a{
   font-size: 18px;
 }
+.navbar .buttons .btn{
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.products .buttons .btn{
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+.products .card{
+  border-radius: 0%;
+  transition: all 0.2s ease-in-out;
+}
+.products .card:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 15px black;
+}
+.products .card .btn{
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.detail img:hover{
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+.detail .btn{
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+.cart .btn, .btn-close{
+  box-shadow: none;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+.checkout input, 
+.checkout select{
+  border-radius: 0%;
+}
+.checkout input:focus, 
+.checkout select:focus{
+  box-shadow: none;
+}
+.checkout .btn{
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
