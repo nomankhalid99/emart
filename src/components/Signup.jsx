@@ -1,25 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Signup = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
-      {/* <!-- Button trigger modal --> */}
+      {/* Button to trigger the modal */}
       <button
         type="button"
-        className="btn ms-2 btn-outline-dark"
-        data-bs-toggle="modal"
-        data-bs-target="#signUpModal"
+        className="btn btn-outline-dark ms-2"
+        onClick={openModal}
       >
-        <i className="fa fa-user-plus me-1"></i> Register
+        <i className="fa fa-sign-in me-1"></i> Register
       </button>
 
-      {/* <!-- Modal --> */}
+      {/* Modal */}
       <div
-        className="modal fade"
-        id="signUpModal"
+        className={`modal fade ${showModal ? "show" : ""}`}
+        id="loginModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
+        aria-hidden={!showModal}
+        style={{ display: showModal ? "block" : "none" }}
       >
         <div className="modal-dialog">
           <div className="modal-content">
@@ -32,6 +42,7 @@ const Signup = () => {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={closeModal}
               ></button>
             </div>
             <div className="modal-body">

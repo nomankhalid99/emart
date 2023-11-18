@@ -1,4 +1,11 @@
 /* Navbar */
+.navbar .navbar-toggler{
+  border: none;
+  font-size: 20px;
+}
+.navbar .navbar-toggler:focus{
+  box-shadow: none;
+}
 .navbar-nav a{
   font-size: 18px;
 }

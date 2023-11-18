@@ -7,9 +7,17 @@ import Signup from "./Signup";
 const Navbar = () => {
   const state = useSelector((state) => state.hanldeCart);
 
+  const handleClick = () => {
+      document.querySelectorAll(".nav-link").forEach((el) => {
+        el.addEventListener("click", () => {
+          document.querySelector(".navbar-toggler").click();
+        });
+      });
+  }
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-white navbar-light py-3 shadow-sm">
+      <nav className="navbar navbar-expand-lg fixed-top bg-white navbar-light py-3 shadow-sm">
         <div className="container">
           <NavLink className="navbar-brand fw-bold fs-3" to="#">
             E-Mart
@@ -28,22 +36,22 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">
+                <NavLink className="nav-link active" aria-current="page" onClick={handleClick} to="/">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/products">
+                <NavLink className="nav-link" onClick={handleClick} to="/products">
                   Products
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
+                <NavLink className="nav-link" onClick={handleClick} to="/about">
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
+                <NavLink className="nav-link" onClick={handleClick} to="/contact">
                   Contact
                 </NavLink>
               </li>

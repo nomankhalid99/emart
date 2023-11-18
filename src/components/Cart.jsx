@@ -14,8 +14,8 @@ const Cart = () => {
 
   const cartItems = (cartItem) => {
     return (
-      <div className="px-4 my-5 bg-light rounded-3" key={cartItem.id}>
-        <div className="container cart py-4">
+      <div className=" my-5 py-5 bg-light rounded-3" key={cartItem.id}>
+        <div className="container cart ">
           <button
             onClick={() => handleClose(cartItem)}
             className="btn-close float-end"
@@ -43,7 +43,7 @@ const Cart = () => {
   const emptyCart = () => {
     return (
       <div className="px-4 my-5 bg-light rounded-3 py-5">
-        <div className="container py-4 ">
+        <div className="container py-4 my-5">
           <div className="row">
             <h3>Your Cart is Empty.</h3>
           </div>
