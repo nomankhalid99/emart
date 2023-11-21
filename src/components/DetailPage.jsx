@@ -46,12 +46,13 @@ const DetailPage = () => {
   const ShowProduct = () => {
     return (
       <>
-        <div className="col-md-6 d-flex align-items-center justify-content-center">
+        <div className="col-md-6 mb-3 d-flex align-items-center justify-content-center">
           <img
             src={product.image}
             alt={product.title}
             height="400px"
             width="400px"
+            className="image-fluid"
           />
         </div>
         <div className="col-md-6">
@@ -79,7 +80,7 @@ const DetailPage = () => {
 
   return (
     <div>
-      <div className="container detail py-5">
+      <div className="container detail my-5 py-5">
         <div className="row py-4">
           {loading ? <Loading /> : <ShowProduct />}
         </div>

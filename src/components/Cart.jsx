@@ -28,6 +28,7 @@ const Cart = () => {
                 alt={cartItem.title}
                 height="200px"
                 width="150px"
+                className="image-fluid"
               />
             </div>
             <div className="col-md-4">
@@ -56,7 +57,7 @@ const Cart = () => {
     return(
         <div className="container cart">
             <div className="row">
-                <NavLink to='/checkout' className="btn btn-outline-dark mb-5 w-25 mx-auto">Proceed to Checkout</NavLink>
+                <NavLink to='/checkout' className="btn btn-outline-dark mb-5 w-50 mx-auto">Proceed to Checkout</NavLink>
             </div>
         </div>
     )

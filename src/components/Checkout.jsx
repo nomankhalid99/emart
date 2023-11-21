@@ -19,7 +19,7 @@ const Checkout = () => {
     }
 
   return (
-    <div className="container checkout my-5">
+    <div className="container checkout my-5 py-5">
       <div className="row g-5">
         <div className="col-md-5 col-lg-4 order-md-last">
           <h4 className="d-flex justify-content-between align-items-center mb-3">
